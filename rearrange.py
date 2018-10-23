@@ -1,5 +1,14 @@
 import random
+import sys
 
-def rearrange_words(word_1, word_2, word_3, word_4):
-    words = list()
-    words.append(word)
+words = list(sys.argv)
+words.remove(words[0])
+
+def rearrange_words(words):
+    random.shuffle(words)
+    print(words)
+
+
+if __name__ in '__main__':
+    print(words)
+    rearrange_words(words)
