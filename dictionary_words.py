@@ -30,7 +30,9 @@ def make_a_sentence(number_of_words):
     print("Your incoherent sentence of the day is:\n{}.".format(final_sentence.capitalize()))
 
 # logging program performance time to logger file
-start_time = time.process_time()
+# start_time = time.process_time()
 make_a_sentence(number_of_words)
+
+# unsure how to write program to optimize for speed; seems speedy to me
 # f = open("dictionary_words_logger.txt", "a")
 # f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))
