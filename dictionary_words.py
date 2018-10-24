@@ -1,7 +1,7 @@
 import random
 import sys
-import time
-import datetime
+import time # needed to record performance time
+import datetime # needed to record when trials are done
 
 
 # importing built-in word list
@@ -32,5 +32,5 @@ def make_a_sentence(number_of_words):
 # logging program performance time to logger file
 start_time = time.process_time()
 make_a_sentence(number_of_words)
-f = open("dictionary_words_logger.txt", "a")
-f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))
+# f = open("dictionary_words_logger.txt", "a")
+# f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))
