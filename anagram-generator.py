@@ -2,6 +2,7 @@ import sys
 import random
 
 # import dictionary of most English words
+# made this generator produce English words before the tutorial pointed out that there is a built in word list with Unix, hence the text file
 all_words = open("words.txt", "r")
 # convert into list of strings without new line
 word_list = all_words.read().replace("\n", " ").split()
