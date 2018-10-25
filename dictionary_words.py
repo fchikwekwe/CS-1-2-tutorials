@@ -7,8 +7,6 @@ import datetime # needed to record when trials are done
 words = open("/usr/share/dict/words", "r")
 # making words into list
 word_list = words.read().replace("\n", " ").split()
-# command line argument
-number_of_words = int(sys.argv[1])
 
 def make_a_sentence(number_of_words):
     # keep track of word count
@@ -24,18 +22,19 @@ def make_a_sentence(number_of_words):
         # increment word count
         word_count += 1
         # piece together our final words into a string
-        final_sentence = ' '.join(sentence)
+    return sentence
+
+if __name__ in '__main__':
+    # command line argument
+    number_of_words = int(sys.argv[1])
+    # logging program performance time to dictionary word logger file
+    start_time = time.process_time()
+
+    final_sentence = ' '.join(make_a_sentence(number_of_words))
     # voila!
     print("Your incoherent sentence of the day is:\n{}.".format(final_sentence.capitalize()))
 
-if __name__ in '__main__':
-    # logging program performance time to dictionary word logger file
-
-    # start_time = time.process_time()
-    make_a_sentence(number_of_words)
-
     # unsure how to write program to optimize more for speed; seems speedy to me
-
     # disabled logging function until needed
-    # f = open("dictionary_words_logger.txt", "a")
-    # f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))
+    f = open("dictionary_words_logger.txt", "a")
+    f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))

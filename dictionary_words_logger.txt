@@ -9,4 +9,6 @@ Program ran in 0.00032300000000000384 seconds.
 Current date and time: 2018-10-23 21:17:28.202170
 Program ran in 0.00032299999999998996 seconds.
 
-"""Optimized Time Trials"""
+
+Current date and time: 2018-10-25 15:07:09.383162 
+Program ran in 0.00039300000000000446 seconds.

@@ -14,6 +14,5 @@ def rearrange_words(words):
         words.remove(new_word)
     return new_words
 
-
 if __name__ in '__main__':
     print(" ".join(rearrange_words(words)))
