@@ -1,0 +1,20 @@
+A machine learning method very loosely based on connections in the brain. A system of connected nodes that are segmented into layers.
+Using very large neural networks — called deep nets — to solve complex problems.
+This machine learning method uses a line of branching questions or observations about a given data set to predict a target value.
+An attempt to collect and categorize sets of points into groups that are “sufficiently similar," or "close" to one another.
+The process of pulling data from a website’s source code. It generally involves writing a script that will identify the information a user wants and pull it into a new file for later analysis.
+The process of pulling actionable insight out of a set of data and putting it to good use.
+This measures how spread out a set of values are. Mathematically, it is the average difference between individual values and the mean for the set of values.
+This measures how spread out a set of values are. Mathematically, the standard deviation is the square root of the variance of a set. It's often represented by the greek symbol sigma, σ.
+A data point that is considered extremely far from other points. They are generally the result of exceptional cases or errors in measurement, and should always be investigated early in a data analysis workflow.
+When all of the values in a set of data have been adjusted to fall within a common range to make comparisons easier and more meaningful.
+The measure of how much one set of values depends on another.
+This field is highly focused on using algorithms for to gain an edge in the financial sector.
+The art of communicating meaningful data visually. This can involve infographics, traditional plots, or even full data dashboards.
+The discipline of using data and advanced statistics to make predictions.
+It's all about the back end. Building systems to make it easy for data scientists to do their analysis.
+Focused more on answering questions about the present and the past. It uses less complex statistics and generally tries to identify patterns that can improve an organization.
+A discipline involving research and development of machines that are aware of their surroundings.
+Another supervised machine learning problem. It focuses on how a target value changes as other values within a data set change.
+A process where a computer uses an algorithm to gain understanding about a set of data, then makes predictions based on its understanding.
+A supervised machine learning problem. It deals with categorizing a data point based on its similarity to other data points.

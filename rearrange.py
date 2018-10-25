@@ -5,12 +5,15 @@ import sys
 words = list(sys.argv)
 # remove the file name from the list
 words.remove(words[0])
-
+new_words = list()
 def rearrange_words(words):
-    random.shuffle(words)
-    print(words)
+    # this function takes the original list and rearranges the words into a new list
+    while len(words) > 0:
+        new_word = random.choice(words)
+        new_words.append(new_word)
+        words.remove(new_word)
+    return new_words
 
 
 if __name__ in '__main__':
-    print(words)
-    rearrange_words(words)
+    print(" ".join(rearrange_words(words)))
