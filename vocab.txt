@@ -1,0 +1,20 @@
+Neural Networks
+Deep Learning
+Decision Trees
+Clustering
+Web Scraping
+Data Mining
+Variance
+Standard Deviation
+Outlier
+Normalize
+Correlation
+Quantitative Analysis
+Data Visualization
+Data Science
+Data Engineering
+Data Analysis
+Artificial Intelligence
+Regression
+Machine Learning
+Classification
