@@ -28,7 +28,7 @@ def print_definitions(definition_list):
         print("{}: {}".format(definition_list.index(definition), definition))
     print("-------------------------")
 
-def choose_definition(vocab_list, random_index, definition_choice):
+def choose_definition(vocab_list, random_index, definition_choice, definition_list):
     # compare random word index to definition index
     while True:
         # pick a random word from the list
@@ -36,19 +36,23 @@ def choose_definition(vocab_list, random_index, definition_choice):
         # get the index of that random word to compare laters
         random_index = vocab_list.index(random_word)
         print(colored("Enter 'Q' at anytime to quit the game.", "magenta"))
+        print(colored("Enter 'P' at anytime to print the definitions again", "yellow"))
         definition_choice = input("Enter the number of the definition of {}: ".format(random_word))
 
         # check if the player wants to exit the game
         if definition_choice.lower() == 'q':
             print("Thanks for playing!")
             break
+        elif definition_choice.lower() == 'p':
+            print_definitions(definition_list)
+            continue
+        # check if the input is a number
+        elif definition_choice.isdigit() != True:
+            print(colored("Please enter a number next time!", "cyan"))
+            definition_choice = -1
         # check if the index is within range
         elif int(definition_choice) > len(definition_list) - 1:
             print(colored("Please pick a number on the list!", "cyan"))
-            definition_choice = -1
-        # check if the input is a number
-        elif definition_choice.isdigit() != True:
-            print("Please enter a number next time!")
             definition_choice = -1
         else:
             pass
@@ -71,4 +75,4 @@ if __name__ in '__main__':
 
     print_definitions(definition_list)
     # set random_index and definition_choice equal to a number that is not in the index
-    choose_definition(vocab_list, -2, -1)
+    choose_definition(vocab_list, -2, -1, definition_list)
