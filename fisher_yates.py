@@ -2,14 +2,11 @@ import random
 
 def fisher_yates_shuffle(list):
     # if there are items to shuffle
-    for item in list:
-        # pick a random element
-        random_item = random.choice(list)
-        # get the indices of those elements
-        item_index = list.index(item)
-        random_item_index = list.index(random_item)
+    for index in range(len(list)):
+        # pick a random index
+        random_index = random.randint(0, len(list)-1)
         # swap it with the current element
-        list[item_index], list[random_item_index] = list[random_item_index], list[item_index]
+        list[index], list[random_index] = list[random_index], list[index]
     return list
 
 
