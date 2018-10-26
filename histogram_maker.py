@@ -3,20 +3,21 @@
 def get_source_text(file_name):
     # import text file and clean it of all punctuation
     punctuations = """!@#$%^&*()_-+=[]{}\|;':",./<>?`~"""
-    source = open(file_name, "r").read().replace("\n", "").splitlines()
+    source = open(file_name, "r").read().replace("\n", "").split()
     print(source)
     # checking word for punctuation and removing it
-    # for word in source:
-    #     for character in word:
-    #         if character in punctuations:
-    #             # print(word)
-    #             word_index = source.index(word)
-    #             new_word = word.replace(character, "")
-    #             source.pop(word_index)
-    #             source.insert(word_index, new_word)
-    #         else:
-    #             pass
-    # print(source)
+    for word in source:
+        for character in word:
+            if character in punctuations:
+                # print(word)
+                word_index = source.index(word)
+                source.pop(word_index)
+                new_word = word.replace(character, "")
+                source.insert(word_index, new_word)
+                word = new_word
+            else:
+                pass
+    print(source)
     # source.splitlines()
     # print(source)
 
