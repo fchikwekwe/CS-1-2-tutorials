@@ -8,6 +8,7 @@ words.remove(words[0])
 new_words = list()
 def rearrange_words(words):
     # this function takes the original list and rearranges the words into a new list
+    # consider using pop instead so that it removes by index
     while len(words) > 0:
         new_word = random.choice(words)
         new_words.append(new_word)
