@@ -30,8 +30,7 @@ def print_definitions(definition_list):
 
 def choose_definition(vocab_list, random_index, definition_choice):
     # compare random word index to definition index
-    playing = True
-    while playing:
+    while True:
         # pick a random word from the list
         random_word = random.choice(vocab_list)
         # get the index of that random word to compare laters
@@ -39,18 +38,22 @@ def choose_definition(vocab_list, random_index, definition_choice):
         print(colored("Enter 'Q' at anytime to quit the game.", "magenta"))
         definition_choice = input("Enter the number of the definition of {}: ".format(random_word))
 
+        # check if the player wants to exit the game
         if definition_choice.lower() == 'q':
             print("Thanks for playing!")
             break
+        # check if the index is within range
         elif int(definition_choice) > len(definition_list) - 1:
             print(colored("Please pick a number on the list!", "cyan"))
             definition_choice = -1
+        # check if the input is a number
         elif definition_choice.isdigit() != True:
             print("Please enter a number next time!")
             definition_choice = -1
         else:
             pass
 
+        # check if the player has guessed correctly or not
         if random_index == int(definition_choice):
             print(colored("Great job! Let's try another one!", "green"))
         else:
@@ -68,4 +71,4 @@ if __name__ in '__main__':
 
     print_definitions(definition_list)
     # set random_index and definition_choice equal to a number that is not in the index
-    choose_definition(vocab_list, -1, -2)
+    choose_definition(vocab_list, -2, -1)
