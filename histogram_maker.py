@@ -15,6 +15,7 @@ def get_source_text(file_name):
                 new_word = word.replace(character, "")
                 source.insert(word_index, new_word)
                 word = new_word
+                continue
             else:
                 pass
     print(source)
