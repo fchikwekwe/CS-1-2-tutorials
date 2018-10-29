@@ -51,7 +51,6 @@ def unique_words(histogram):
     for gram in histogram:
         # increment our unique_words_count
         unique_words_count += 1
-        # print("Word: {}; count {}".format(gram, unique_words_count))
     # return the count as an integer
     return unique_words_count
 
@@ -62,7 +61,7 @@ def frequency(word, histogram):
     for gram in histogram:
         # check if the first element is the same as the word parameter
         if gram[1] == word:
-            # if it is, then increment the frequency_counter by the value of the zeroth elements
+            # if it is, then increment the frequency_counter by the value of the zeroth element
             frequency_counter += gram[0]
         else:
             pass
