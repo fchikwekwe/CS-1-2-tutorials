@@ -70,5 +70,5 @@ def frequency(word, histogram):
 if __name__ in '__main__':
     source_text = get_source_text("souls_of_black_folk.txt")
     histogram = histogram(source_text)
-    unique_words = unique_words(histogram)
+    unique_words = print(unique_words(histogram))
     word_frequency_example = frequency("black", histogram)
