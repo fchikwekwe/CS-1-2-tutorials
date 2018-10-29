@@ -24,7 +24,7 @@ def frequency(word, histogram):
     # counts up the number of times that a word appears
     frequency_counter = 0
     # iterate over the histogram tuple
-    for count, word in histogram.items():
+    for key, value in histogram.items():
         # check if the key is the same as the word parameter
         if key == word:
             # if it is, then increment the frequency_counter by the value
@@ -39,3 +39,6 @@ if __name__ in '__main__':
     unique_words = histogram_maker.unique_words(dict_histogram)
     frequency = frequency("black", dict_histogram)
     print(frequency)
+
+    f = open("histogram_logger.txt", "a")
+    f.write("\n\nData Structure Type: Dictionary\nHistogram: {}\nNumber of Unique Words: {}\nFrequency of the word 'Veil': {}".format(dict_histogram, unique_words, frequency))

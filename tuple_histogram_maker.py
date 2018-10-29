@@ -42,5 +42,8 @@ if __name__ in '__main__':
     source_text = histogram_maker.get_source_text("souls_of_black_folk.txt")
     tuple_histogram = tuple_histogram(source_text)
     unique_words = histogram_maker.unique_words(tuple_histogram)
-    frequency = frequency("black", tuple_histogram)
+    frequency = frequency("the", tuple_histogram)
     print(frequency)
+
+    f = open("histogram_logger.txt", "a")
+    f.write("\n\nData Structure Type: Tuple\nHistogram: {}\nNumber of Unique Words: {}\nFrequency of the word 'the': {}".format(tuple_histogram, unique_words, frequency))

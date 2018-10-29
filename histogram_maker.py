@@ -71,5 +71,8 @@ if __name__ in '__main__':
     source_text = get_source_text("souls_of_black_folk.txt")
     histogram = histogram(source_text)
     unique_words = unique_words(histogram)
-    word_frequency_example = frequency("black", histogram)
-    print(word_frequency_example)
+    frequency = frequency("black", histogram)
+    print(frequency)
+
+    f = open("histogram_logger.txt", "a")
+    f.write("\n\nData Structure Type: List of lists\nHistogram: {}\nNumber of Unique Words: {}\nFrequency of the word 'black': {}".format(histogram, unique_words, frequency))
