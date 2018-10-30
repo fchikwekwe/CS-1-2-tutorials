@@ -26,22 +26,22 @@ def get_random_words(number_of_words, word_list):
         # piece together our final words into a string
     return words_for_sentence
 
-def make_a_sentence():
-    pass
+def make_a_sentence(number_of_words, word_list):
+    final_sentence = ' '.join(get_random_words(number_of_words, word_list))
+    # voila!
+    print("Your incoherent sentence of the day is:\n{}.".format(final_sentence.capitalize()))
 
 def logger(file):
     f = open(file, "a")
     f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))
 
 if __name__ in '__main__':
-    # command line argument
-    number_of_words = int(sys.argv[1])
+
     # logging program performance time to dictionary word logger file
     start_time = time.process_time()
+    # command line argument
+    number_of_words = int(sys.argv[1])
     word_list = get_source_text("/usr/share/dict/words")
-    final_sentence = ' '.join(get_random_words(number_of_words, word_list))
-    # voila!
-    print("Your incoherent sentence of the day is:\n{}.".format(final_sentence.capitalize()))
-
+    make_a_sentence(number_of_words, word_list)
     # unsure how to write program to optimize more for speed; seems speedy to me
     logger("dictionary_words_logger.txt")
