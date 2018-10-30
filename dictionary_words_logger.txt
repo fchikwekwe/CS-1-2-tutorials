@@ -12,3 +12,9 @@ Program ran in 0.00032299999999998996 seconds.
 
 Current date and time: 2018-10-25 15:07:09.383162 
 Program ran in 0.00039300000000000446 seconds.
+
+Current date and time: 2018-10-30 13:36:17.029036 
+Program ran in 0.0003439999999999971 seconds.
+
+Current date and time: 2018-10-30 13:44:07.091521 
+Program ran in 0.0011079999999999979 seconds.
