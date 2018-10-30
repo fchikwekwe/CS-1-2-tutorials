@@ -14,10 +14,7 @@ def dict_histogram(source_text):
         word_count = source_text.count(word)
         # using word as key since it is unique
         histogram[word] = word_count
-        # removes all occurances of the word we've counted from original text
-        while word in source_text:
-            source_text.remove(word)
-    # returns a dictionary
+    # returns a dictionary; no duplicates to worry about
     return histogram
 
 def frequency(word, histogram):
@@ -38,7 +35,4 @@ if __name__ in '__main__':
     dict_histogram = dict_histogram(source_text)
     unique_words = histogram_maker.unique_words(dict_histogram)
     frequency = frequency("black", dict_histogram)
-    print(frequency)
-
-    f = open("histogram_logger.txt", "a")
-    f.write("\n\nData Structure Type: Dictionary\nHistogram: {}\nNumber of Unique Words: {}\nFrequency of the word 'Veil': {}".format(dict_histogram, unique_words, frequency))
+    logger = histogram_maker.logger("histogram_logger.txt", "Dictionary", dict_histogram, unique_words, "black", frequency)

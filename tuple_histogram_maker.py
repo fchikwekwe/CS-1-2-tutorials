@@ -5,7 +5,7 @@ import histogram_maker
 
 def tuple_histogram(source_text):
     # takes in source text and returns a histogram in the form of a tuple
-    histogram = [] # empty list will change to tuple later
+    initial_histogram = [] # empty list will change to tuple later
     histogram_index = 0 # keep track of index to use to add to tuple
     # checks each word in the source text
     for word in source_text:
@@ -16,12 +16,16 @@ def tuple_histogram(source_text):
         count_and_word.append(word_count)
         count_and_word.append(word)
         # then adds the smaller list to the histogram list
-        histogram.append(count_and_word)
+        initial_histogram.append(count_and_word)
         # increments index number
         histogram_index += 1
         # removes all occurances of the word we've counted from original text
-        while word in source_text:
-            source_text.remove(word)
+    histogram = []
+    for list in initial_histogram:
+        if list not in histogram:
+            histogram.append(list)
+        else:
+            pass
     # returns a tuple
     return tuple(histogram)
 
@@ -43,7 +47,4 @@ if __name__ in '__main__':
     tuple_histogram = tuple_histogram(source_text)
     unique_words = histogram_maker.unique_words(tuple_histogram)
     frequency = frequency("the", tuple_histogram)
-    print(frequency)
-
-    f = open("histogram_logger.txt", "a")
-    f.write("\n\nData Structure Type: Tuple\nHistogram: {}\nNumber of Unique Words: {}\nFrequency of the word 'the': {}".format(tuple_histogram, unique_words, frequency))
+    histogram_maker.logger("histogram_logger.txt", "Tuple", tuple_histogram, unique_words, "the", frequency)
