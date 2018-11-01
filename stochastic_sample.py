@@ -37,11 +37,14 @@ def weighted_probablity(weighted_histogram, num_trials):
     # slow method, but it works
     return results
 
+def logger(file_name, histogram):
+    f = open(file_name, "a")
+    f.write("\n\n{}".format(histogram))
+
 if __name__ in '__main__':
-    # demo histogram
-    histogram = ["there", "once", "was", "a", "man", "from", "nantucket"]
-    # with weightss
     weighted_histogram = [["there", 0.05], ["once", 0.2], ["was", 0.05], ["a", 0.1], ["man", 0.1], ["from", 0.1], ["nantucket", 0.4]]
-    results_list = weighted_probablity(weighted_histogram, 100000)
+    results_list = weighted_probablity(weighted_histogram, 10000)
     # using histogram function from histogram_maker
-    print(histogram_maker.histogram(results_list))
+    results_histogram = histogram_maker.histogram(results_list)
+    print(results_histogram)
+    logger("stochastic_logger.txt", results_histogram)

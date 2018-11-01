@@ -1,0 +1,12 @@
+Based on:
+
+weighted_histogram = [["there", 0.05], ["once", 0.2], ["was", 0.05], ["a", 0.1], ["man", 0.1], ["from", 0.1], ["nantucket", 0.4]]
+
+[[4039, 'nantucket'], [492, 'there'], [2015, 'once'], [1010, 'a'], [477, 'was'], [960, 'man'], [1007, 'from']]
+
+[[1962, 'once'], [549, 'was'], [533, 'there'], [984, 'man'], [3989, 'nantucket'], [995, 'a'], [988, 'from']]
+
+[[4001, 'nantucket'], [1044, 'a'], [463, 'there'], [1937, 'once'], [1063, 'man'], [1014, 'from'], [478, 'was']]
+
+
+[[4007, 'nantucket'], [1013, 'from'], [502, 'there'], [1931, 'once'], [1008, 'a'], [496, 'was'], [1043, 'man']]
