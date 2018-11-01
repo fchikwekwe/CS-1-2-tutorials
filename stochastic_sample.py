@@ -5,14 +5,14 @@ def random_word(histogram):
     for word in histogram:
         # using random module to get a random items
         # used random.choice initially, but then changed to random.randint
-        random_index = random.randint(0, len(histogram)-1)
+        random_index = random.randrange(len(histogram))
 
     random_word = histogram[random_index]
     return random_word
 
 def weighted_probablity(weighted_histogram):
     not_chosen = True
-    results = {}
+    # results = {}
     while not_chosen:
         random_choice = random.choice(weighted_histogram)
         word = random_choice[0]
