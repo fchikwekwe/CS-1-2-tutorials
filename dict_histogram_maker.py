@@ -8,8 +8,6 @@ def dict_histogram(source_text):
     histogram = {} # empty dict to store histogram
     # checks each word in the source text
     for word in source_text:
-        # lists that will go inside of histogram list
-        count_and_word = []
         # counts up the words in the source text and adds count and word to list
         word_count = source_text.count(word)
         # using word as key since it is unique
@@ -25,7 +23,7 @@ def frequency(word, histogram):
         # check if the key is the same as the word parameter
         if key == word:
             # if it is, then increment the frequency_counter by the value
-            frequency_counter += value
+            frequency_counter = value
         else:
             pass
     return frequency_counter
