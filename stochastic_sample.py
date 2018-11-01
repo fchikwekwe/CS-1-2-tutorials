@@ -1,4 +1,5 @@
 import random
+import histogram_maker
 
 def random_word(histogram):
     # iterate over the histogram
@@ -10,36 +11,37 @@ def random_word(histogram):
     random_word = histogram[random_index]
     return random_word
 
-def weighted_probablity(weighted_histogram):
-    not_chosen = True
-    # results = {}
-    while not_chosen:
-        random_choice = random.choice(weighted_histogram)
-        word = random_choice[0]
-        probability = random_choice[1]
-        random_number = random.uniform(0,1)
-        if probability > random_number:
-            # print("failure")
-            # print(random_choice, random_number)
-            return word
-            # if word not in results:
-            #     results.update({word: 1})
-            # else:
-            #     results[word] += 1
-            # return results
-            not_chosen = False
-        else:
-            # print("success")
-            # print(choice, random_number)
-            continue
-
-# if the word is not in the new array, then add it
-# if the word is already in the new array, then increment frequency
-
+def weighted_probablity(weighted_histogram, num_trials):
+    # this list will hold all the generated words
+    results = []
+    # the number of time that we will run this function
+    for _ in range(num_trials):
+        # setting up a while loop so that we always return a value
+        not_chosen = True
+        while not_chosen:
+            # randomly choose a list from our list of listss
+            random_choice = random.choice(weighted_histogram)
+            # assigning variable names to list parts to make it readable
+            word = random_choice[0]
+            probability = random_choice[1]
+            # randomly generating a float between 0 and 1 inclusive
+            random_number = random.uniform(0,1)
+            # compare the probability with the random number
+            if probability > random_number:
+                # if probability is bigger then we get that word
+                results.append(word)
+                not_chosen = False
+            else:
+                # if not, try again
+                continue
+    # slow method, but it works
+    return results
 
 if __name__ in '__main__':
+    # demo histogram
     histogram = ["there", "once", "was", "a", "man", "from", "nantucket"]
-    weighted_histogram = [["there", 0.1], ["once", 0.2], ["was", 0.1], ["a", 0.1], ["man", 0.1], ["from", 0.1], ["nantucket", 0.3]]
-    # print("Your random histogram word is:\n{}".format(random_word(histogram)))
-    for _ in range(10):
-        print(weighted_probablity(weighted_histogram))
+    # with weightss
+    weighted_histogram = [["there", 0.05], ["once", 0.2], ["was", 0.05], ["a", 0.1], ["man", 0.1], ["from", 0.1], ["nantucket", 0.4]]
+    results_list = weighted_probablity(weighted_histogram, 100000)
+    # using histogram function from histogram_maker
+    print(histogram_maker.histogram(results_list))
