@@ -8,5 +8,4 @@ weighted_histogram = [["there", 0.05], ["once", 0.2], ["was", 0.05], ["a", 0.1],
 
 [[4001, 'nantucket'], [1044, 'a'], [463, 'there'], [1937, 'once'], [1063, 'man'], [1014, 'from'], [478, 'was']]
 
-
 [[4007, 'nantucket'], [1013, 'from'], [502, 'there'], [1931, 'once'], [1008, 'a'], [496, 'was'], [1043, 'man']]

@@ -23,7 +23,6 @@ def get_source_text(file_name):
                 pass
     return source
 
-
 def histogram(source_text):
     # takes in source text and returns a histogram in the form of a list of lists
     initial_histogram = [] # empty list to store histogram
