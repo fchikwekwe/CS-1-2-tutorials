@@ -29,11 +29,13 @@ def get_random_words(number_of_words, word_list):
 def make_a_sentence(number_of_words, word_list):
     final_sentence = ' '.join(get_random_words(number_of_words, word_list))
     # voila!
-    print("Your incoherent sentence of the day is:\n{}.".format(final_sentence.capitalize()))
+    return "Your incoherent sentence of the day is:\n{}.".format(final_sentence.capitalize())
+    # return printed
 
 def logger(file):
     f = open(file, "a")
     f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))
+    return 'hello'
 
 if __name__ in '__main__':
 

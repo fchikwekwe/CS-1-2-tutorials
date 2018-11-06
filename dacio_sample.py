@@ -1,15 +1,15 @@
 import random
-import histogram_maker
+import dict_histogram_maker
 
 # code comes from @DacioRomero's method
 
 def histogram_sample(histogram):
-    weighted_sample = random_choice(zip(zip(histogram)))
+    weighted_sample = random_choice(zip(histogram.items()))
     return weighted_sample
 
 def histogram_samples(histogram, k=1):
     """returns a random, weighted sample from a histogram"""
-    weighted_sample = random_choices(zip(zip(histogram)), None, None, k)
+    weighted_sample = random_choices(zip(histogram.items()), k=k)
     return weighted_sample
 
 def random_choices(sequence, weights=None, cumulative_weights=None, k=1):
@@ -62,6 +62,6 @@ def convert_weights(weights):
 
 if __name__ in '__main__':
     text = "And the Raven, never flitting, still is sitting, still is sitting"
-    histogram = histogram_maker.histogram(' '.join(text))
+    histogram = dict_histogram_maker.histogram(' '.join(text))
     samples = histogram_samples(histogram, k=100000)
-    print(histogram_maker.histogram(samples))
+    print(dict_histogram_maker.histogram(samples))
