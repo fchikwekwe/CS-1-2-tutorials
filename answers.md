@@ -11,8 +11,10 @@
 - This can definitely be improved upon. I am working on going back through all of my usable code and making it more concise, with as few side effects as possible.
 
 5. Are there functions that could be better organized in an Object-Oriented Programming style by defining them as methods of a class?
+- In much of my code, OOP could be used to make functions easier to use and understand. But in the last few exercises, I think I've used classes appropriate as has been prescribed in lectures.
+
 6. Can files be used as both modules and as scripts?
-- 
+- Yes, almost all of them work as modules and as scripts. 
 
 7. Do modules all depend on each other or can they be used independently?
 - There are some modules that depend on the others, but even these can be used with various other modules to perform their functions.
