@@ -34,7 +34,10 @@ def make_a_sentence(number_of_words, word_list):
 
 def logger(file):
     f = open(file, "a")
-    f.write("\n\nCurrent date and time: {} \nProgram ran in {} seconds.".format(datetime.datetime.now(), time.process_time() - start_time))
+    f.write("""
+
+    Current date and time: {}
+    Program ran in {} seconds.""".format(datetime.datetime.now(), time.process_time() - start_time))
     return 'hello'
 
 if __name__ in '__main__':

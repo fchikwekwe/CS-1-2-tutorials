@@ -23,7 +23,7 @@ def frequency(word, histogram):
         # check if the key is the same as the word parameter
         if key == word:
             # if it is, then increment the frequency_counter by the value
-            frequency_counter = value
+            frequency_counter += value
         else:
             pass
     return frequency_counter

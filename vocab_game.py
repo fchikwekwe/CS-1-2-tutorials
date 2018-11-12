@@ -61,7 +61,12 @@ def choose_definition(vocab_list, random_index, definition_choice, definition_li
         if random_index == int(definition_choice):
             print(colored("Great job! Let's try another one!", "green"))
         else:
-            print(colored("That was not correct! The correct definition was:\n\n{} \n\nLet's try again with a new word.", "red").format(definition_list[int(definition_choice)]))
+            print(colored("""
+            That was not correct! The correct definition was:
+
+            {}
+
+            Let's try again with a new word.""", "red").format(definition_list[int(definition_choice)]))
 
 
 if __name__ in '__main__':
