@@ -31,24 +31,23 @@ class HashTable(object):
     def keys(self):
         """Return a list of all keys in this hash table.
         TODO: Running Time: O(n) because you would need to traverse all buckets and
-        search them for key"""
+        all keys within"""
         # Collect all keys in each bucket
         keys_list = []
         for bucket in self.buckets:
             # print(bucket)
-            for key, value in bucket.items():
-                print("key: {}, value: {}".format(key, value))
+            for key, _ in bucket.items():
                 keys_list.append(key)
         return keys_list
 
     def values(self):
         """Return a list of all values in this hash table.
-        TODO: Running Time: O(n) because you would need to traverse all buckets and
-        search them for key"""
+        Running Time: O(n) because you would need to traverse all buckets and
+        all values within"""
         values_list = []
         # Loop through all buckets
         for bucket in self.buckets:
-            for key, value in bucket.items():
+            for _, value in bucket.items():
                 # Collect all values in each bucket
                 values_list.append(value)
         return values_list
@@ -64,7 +63,7 @@ class HashTable(object):
 
     def length(self):
         """Return the number of key-value entries by traversing its buckets.
-        TODO: Running time: O(n) because you must traverse all buckets and all
+        Running time: O(n) because you must traverse all buckets and all
         keys within buckets to get the length of each; if you use the .size
         property, then it would be O(b)"""
         count = 0
@@ -77,7 +76,7 @@ class HashTable(object):
 
     def contains(self, key):
         """Return True if this hash table contains the given key, or False.
-        TODO: Running time: Best case O(1) if given key is the first item
+        Running time: Best case O(1) if given key is the first item
         the first bucket; Worse case O(l) You need to traverse all buckets and
         the found bucket for key"""
         # Find bucket where given key belongs
@@ -94,7 +93,7 @@ class HashTable(object):
 
     def get(self, key):
         """Return the value associated with the given key, or raise KeyError.
-        TODO: Running time: Best case O(1) if given key is the first item
+        Running time: Best case O(1) if given key is the first item
         the first bucket; Worse case O(l) You need to traverse all buckets and
         the found bucket for key"""
         # Find bucket where given key belongs
@@ -112,7 +111,7 @@ class HashTable(object):
 
     def set(self, key, value):
         """Insert or update the given key with its associated value.
-        TODO: Running time: Best case O(1) if given key is the first item
+        Running time: Best case O(1) if given key is the first item
         the first bucket; Worse case O(l) You need to traverse all buckets and
         the found bucket for key"""
         # Find bucket where given key belongs
